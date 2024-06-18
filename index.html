@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>テストをどうにかしようの会</title>
+  <title>俺はマコト！</title>
   <style>
     body {
       background-color: #FFE4C4;
@@ -25,34 +25,35 @@
     }
 
     .content {
-      border: 2px solid #FF0000; 
+      border: 4px solid #FF0000; /* 枠線の幅を4pxに変更 */
       border-radius: 10px; 
       padding: 20px; 
       margin-top: 20px;
       background-color: #FFFFFF; 
+      width: fit-content; /* ボタンの幅に合わせて調整 */
+      margin: 0 auto; /* 中央寄せ */
     }
   </style>
 </head>
 <body>
-  <h1>テストをどうにかしようの会</h1>
+  <h1>俺はマコト！</h1>
 
   <a href="#" id="test-button" class="button">テスト関係</a>
-  <a href="#" id="other-button" class="button">お知らせ</a>
+  <a href="#" id="other-button" class="button">その他</a>
 
   <div class="content" id="message-area">
-    <p>このサイトは試験公開中です。</p>
-    <p>「お知らせ」から進捗状況を確認してください。 </p>
+    <p>まだ試験公開中だよ</p> 
   </div>
 
   <script>
     document.getElementById('test-button').addEventListener('click', function() {
-      document.getElementById('message-area').querySelector('p').textContent = '試験公開中です';
+      document.getElementById('message-area').querySelector('p').textContent = 'まだ試験公開中だよっていってるせしょ？';
       const audio = new Audio('https://soundeffect-lab.info/sound/button/mp3/decision3.mp3');
       audio.play();
     });
 
     document.getElementById('other-button').addEventListener('click', function() {
-      document.getElementById('message-area').querySelector('p').textContent = '準備中';
+      document.getElementById('message-area').querySelector('p').textContent = 'まだ準備中ですから。';
       const audio = new Audio('https://soundeffect-lab.info/sound/button/mp3/decision3.mp3');
       audio.play();
     });
