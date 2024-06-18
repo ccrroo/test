@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ほぼエロいサイト</title>
+  <title>函館高専生専用</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- スマホ用設定を追加 -->
   <style>
     body {
@@ -91,10 +91,37 @@
       cursor: pointer; /* カーソルをポインタに変更 */
       border-radius: 50%; /* スライダーのつまみ角丸 */
     }
+
+    h1 {
+      animation: jump-text 1s linear infinite; /* アニメーション設定 */
+    }
+
+    @keyframes jump-text {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); } 
+    }
+
+    h1 span {
+      animation: jump-char 1s linear infinite; 
+      animation-delay: calc(0.1s * var(--i)); /* 文字ごとに遅延時間 */
+    }
+
+    @keyframes jump-char {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); } 
+    }
   </style>
 </head>
 <body>
-  <h1>一斉学習さよなら会</h1>
+  <h1 style="font-size: 3em;">
+    <span style="--i: 0;">函</span>
+    <span style="--i: 1;">館</span>
+    <span style="--i: 2;">高</span>
+    <span style="--i: 3;">専</span>
+    <span style="--i: 4;">ｗ</span>
+  </h1>
 
   <a href="#" id="test-button" class="button">テスト関係</a>
   <a href="#" id="other-button" class="button">SEX関係</a>
@@ -103,10 +130,10 @@
     <p>ようこそ我々のサイトへ！</p> 
   </div>
 
-  <p>天気情報（試してみたかっただけ）</p>  <!-- 空白の文章を追加 -->
+  <p>天気</p>  <!-- 空白の文章を追加 -->
 
   <div class="comment-area">
-    <p>おはようございます。今日の函館市戸倉の天気は、晴れのち曇りです。予定は設定されていません。※下のレバーでスピードを変更できます。</p>
+    <p>おはようございます。予定は設定されていません。良い１日を。※下のレバーで速度調節可</p>
   </div>
 
   <div class="slider">
@@ -115,13 +142,13 @@
 
   <script>
     document.getElementById('test-button').addEventListener('click', function() {
-      document.getElementById('message-area').querySelector('p').textContent = '体育祭だるくね？';
+      document.getElementById('message-area').querySelector('p').textContent = 'まだ見せるものがない';
       const audio = new Audio('https://soundeffect-lab.info/sound/button/mp3/decision3.mp3');
       audio.play();
     });
 
     document.getElementById('other-button').addEventListener('click', function() {
-      document.getElementById('message-area').querySelector('p').textContent = '文具マンは壁とセッ〇スしたようだ';
+      document.getElementById('message-area').querySelector('p').textContent = '文具マンは壁とセックスしたようだ';
       const audio = new Audio('https://soundeffect-lab.info/sound/button/mp3/decision3.mp3');
       audio.play();
     });
