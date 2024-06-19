@@ -1,166 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>文具マン公式サイト</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- スマホ用設定を追加 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サイト移転</title>
   <style>
     body {
-      background-color: #FFE4C4;
-      text-align: center;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 15px 30px;
-      border-radius: 50px; 
-      background-color: #4CAF50; 
+      background-color: black;
       color: white;
-      text-decoration: none;
-      margin: 10px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    .message {
+      font-size: 3em;
+      margin-top: 100px;
+    }
+
+    .blink {
+      animation: blink 1s linear infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        color: yellow;
+      }
+      50% {
+        color: red;
+      }
+      100% {
+        color: yellow;
+      }
+    }
+
+    button {
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border: none;
       font-size: 1.2em;
-      transition: transform 0.1s ease; /* アニメーション設定 */
-    }
-
-    .button:hover {
-      transform: translate(2px, 2px); /* ホバー時の移動 */
-    }
-
-    .content {
-      border: 4px solid #FF0000; /* 枠線の幅を4pxに変更 */
-      border-radius: 10px; 
-      padding: 20px; 
-      margin-top: 40px; /* 上のタイトルとの間隔 */
-      background-color: #FFFFFF; 
-      width: 300px; /* 枠の幅を300pxに固定 */
-      margin: 0 auto; /* 中央寄せ */
-    }
-
-    .comment-area {
-      background-color: #007bff; /* 青色背景 */
-      color: white; /* 白文字 */
-      padding: 10px;
-      margin-top: 100px; /* 上の枠との間隔を大きく */
-      width: 300px; /* 赤い枠と同じ幅 */
-      margin: 0 auto; /* 中央寄せ */
-      overflow: hidden; /* テキストがはみ出さないように */
-      height: 20px; /* 高さを1行分にする */
-      display: flex; /* 中央揃えのためのFlexbox設定 */
-      align-items: center; /* 項目を中央揃え */
-    }
-
-    .comment-area p {
-      animation: scroll-text 10s linear infinite; /* アニメーション設定 */
-      white-space: nowrap; /* テキストを折り返さない */
-      font-weight: bold; /* フォントを太くする */
-    }
-
-    @keyframes scroll-text {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); } 
-    }
-
-    .slider {
-      margin-top: 20px; /* 上のコメント欄との間隔 */
-      width: 300px; /* 幅を固定 */
-      margin: 0 auto; /* 中央寄せ */
-    }
-
-    .slider input[type="range"] {
-      -webkit-appearance: none; /* デフォルトの外観を無効化 */
-      width: 100%; /* スライダーの幅 */
-      height: 8px; /* スライダーの高さ */
-      background: #d3d3d3; /* スライダーの背景 */
-      outline: none; /* アウトラインを削除 */
-      border-radius: 10px; /* 角丸 */
-    }
-
-    .slider input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none; /* デフォルトの外観を無効化 */
-      appearance: none; /* デフォルトの外観を無効化 */
-      width: 20px; /* スライダーのつまみ幅 */
-      height: 20px; /* スライダーのつまみ高さ */
-      background: #4CAF50; /* スライダーのつまみ背景 */
-      cursor: pointer; /* カーソルをポインタに変更 */
-      border-radius: 50%; /* スライダーのつまみ角丸 */
-    }
-
-    .slider input[type="range"]::-moz-range-thumb {
-      width: 20px; /* スライダーのつまみ幅 */
-      height: 20px; /* スライダーのつまみ高さ */
-      background: #4CAF50; /* スライダーのつまみ背景 */
-      cursor: pointer; /* カーソルをポインタに変更 */
-      border-radius: 50%; /* スライダーのつまみ角丸 */
-    }
-
-    h1 {
-      animation: jump-text 1s linear infinite; /* アニメーション設定 */
-    }
-
-    @keyframes jump-text {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-      100% { transform: translateY(0); } 
-    }
-
-    h1 span {
-      animation: jump-char 1s linear infinite; 
-      animation-delay: calc(0.1s * var(--i)); /* 文字ごとに遅延時間 */
-    }
-
-    @keyframes jump-char {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-      100% { transform: translateY(0); } 
+      margin-top: 30px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1 style="font-size: 3em;">
-    <span style="--i: 0;">木</span>
-    <span style="--i: 1;">口</span>
-    <span style="--i: 2;">蒔</span>
-    <span style="--i: 3;">仁</span>
-  </h1>
 
-  <a href="#" id="test-button" class="button">テスト関係</a>
-  <a href="#" id="other-button" class="button">SEX関係</a>
+  <div class="message blink">サイトは新しいページに移動しました</div>
 
-  <div class="content" id="message-area">
-    <p>ようこそ我々のサイトへ！</p> 
-  </div>
+  <button onclick="window.location.href='https://ccrroo.github.io/1/';">移動する</button>
 
-  <p>天気</p>  <!-- 空白の文章を追加 -->
-
-  <div class="comment-area">
-    <p>おはようございます。予定は設定されていません。良い１日を。※下のレバーで速度調節可</p>
-  </div>
-
-  <div class="slider">
-    <input type="range" id="speed-slider" min="1" max="20" value="10">
-  </div>
-
-  <script>
-    document.getElementById('test-button').addEventListener('click', function() {
-      document.getElementById('message-area').querySelector('p').textContent = 'まだ見せるものがない';
-      const audio = new Audio('https://soundeffect-lab.info/sound/button/mp3/decision17.mp3');
-      audio.play();
-    });
-
-    document.getElementById('other-button').addEventListener('click', function() {
-      document.getElementById('message-area').querySelector('p').textContent = '文具マンは壁とセックスしたようだ';
-      const audio = new Audio('https://soundeffect-lab.info/sound/button/mp3/decision3.mp3');
-      audio.play();
-    });
-
-    const commentArea = document.querySelector('.comment-area p');
-    const speedSlider = document.getElementById('speed-slider');
-
-    function updateScrollSpeed() {
-      const speed = speedSlider.value;
-      commentArea.style.animationDuration = `${speed}s`;
-    }
-
-    speedSlider.addEventListener('input', updateScrollSpeed);
-  </script>
 </body>
 </html>
